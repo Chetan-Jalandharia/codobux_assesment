@@ -33,29 +33,53 @@ Edit on the **left panel**, see a **live preview** on the **right panel**, with 
 
 ## Getting Started
 
+Follow these step-by-step instructions to get a local copy of the project up and running.
+
 ### Prerequisites
 
 - **Node.js** 20 or later
 - **npm** (bundled with Node)
+- **Git** (for cloning the repository)
 
-### Install & Run (Development)
+### Step-by-Step Project Setup
 
+#### 1. Clone the Repository
+Clone the project repository from GitHub to your local machine:
 ```bash
-# 1. Install dependencies
-npm install
+git clone https://github.com/Chetan-Jalandharia/codobux_assesment.git
+```
 
-# 2. Start the dev server
+#### 2. Navigate to the Project Directory
+Change your current working directory to the cloned repository folder:
+```bash
+cd codobux_assesment
+```
+
+#### 3. Install Dependencies
+Install all the required package dependencies:
+```bash
+npm install
+```
+
+#### 4. Run the Development Server
+Start the local Next.js development server with hot-reloading:
+```bash
 npm run dev
 ```
+Once started, open [http://localhost:3000](http://localhost:3000) in your web browser.
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+---
 
-### Production Build
+### Available Script Commands
 
-```bash
-npm run build   # compile & type-check
-npm start       # serve production bundle
-```
+Below is a detailed list of all script commands configured in this project and their usage:
+
+| Command | Action / Purpose | Detailed Description |
+|---------|------------------|----------------------|
+| `npm run dev` | Start Development Server | Launches the local dev server on [http://localhost:3000](http://localhost:3000) with hot module replacement (HMR) to automatically reflect code updates in the browser. |
+| `npm run build` | Compile & Production Build | Compiles the TypeScript code, performs strict type checks, and generates a highly optimized Next.js production build in the `.next` directory. |
+| `npm start` | Serve Production Build | Runs the production-optimized web server. Note that `npm run build` must be executed first to create the build folder. |
+| `npm run lint` | Run ESLint Checks | Analyzes the source code static analysis for TypeScript and Next.js guidelines, reporting any formatting, syntax, or styling issues. |
 
 ---
 
@@ -306,17 +330,6 @@ The preview panel (`PreviewPanel.tsx`) subscribes to `useBlocksOrdered()` which 
 | AI_WORKFLOW.md | ✅ Done | — |
 
 **Not implemented (optional):** dark mode, shadcn/ui, undo/redo, preset templates.
-
----
-
-## Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server (hot reload) |
-| `npm run build` | Production build + TypeScript check |
-| `npm start` | Serve production build |
-| `npm run lint` | Run ESLint |
 
 ---
 
